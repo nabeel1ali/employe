@@ -52,6 +52,5 @@ public class UserService {
 
 	public List<User> searchFilter(String firstName, String lastName, String userName) {
 		return uRepository.searchFilter(firstName,lastName,userName);
-
 	}
 }

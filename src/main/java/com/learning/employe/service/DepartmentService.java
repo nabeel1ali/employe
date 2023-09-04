@@ -10,7 +10,6 @@ import com.learning.employe.repository.DepartmentRepository;
 
 @Service
 public class DepartmentService {
-
 	@Autowired
 	private DepartmentRepository departmentRepository;
 
@@ -37,5 +36,4 @@ public class DepartmentService {
 	public List<Department> getByDeptName(String deptName) {
 		return departmentRepository.getByDeptNameContainingIgnoreCase(deptName);
 	}
-
 }

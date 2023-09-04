@@ -13,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,8 +21,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-
 @Entity
 @Table(name = "users")
 public class User {
@@ -40,20 +37,19 @@ public class User {
 	@Column(name = "last_name")
 	private String lastName;
 
-    @NotNull(message = "Username must not be empty.")
-    @Size(min = 3, max = 50, message = "Your username must between 4 and 8 characters")
+	@NotNull(message = "Username must not be empty.")
+	@Size(min = 3, max = 50, message = "Your username must between 4 and 8 characters")
 	@Column(name = "user_name")
 	private String userName;
 
-    @NotBlank(message = "Email cannot be blank")
-    @Email
-    @Size(max = 255, message = "Email length must be less than or equal to 255")
-   // @Pattern(regexp = "^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$", message = "Invalid email pattern")
+	@NotBlank(message = "Email cannot be blank")
+	@Email
+	@Size(max = 255, message = "Email length must be less than or equal to 255")
 	@Column(name = "email")
-    private String email;
-    
-    @NotNull
-    @Size(min = 4, max = 8, message = "Your password must between 4 and 8 characters")
+	private String email;
+
+	@NotNull
+	@Size(min = 4, max = 8, message = "Your password must between 4 and 8 characters")
 	@Column(name = "password")
 	private String password;
 }
