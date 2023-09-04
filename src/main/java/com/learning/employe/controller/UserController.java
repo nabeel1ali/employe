@@ -1,6 +1,5 @@
 package com.learning.employe.controller;
 
-import javax.servlet.annotation.WebServlet;
 import javax.validation.Valid;
 
 import org.springframework.data.repository.query.Param;
@@ -23,7 +22,6 @@ import com.learning.employe.operations.user.ReadUserOperation;
 import com.learning.employe.operations.user.SearchFilterOperation;
 import com.learning.employe.operations.user.UpdateUserOperation;
 
-@WebServlet
 @Controller
 @RequestMapping("/api/user")
 public class UserController {

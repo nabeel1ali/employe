@@ -1,4 +1,4 @@
-package com.learning.employe.operations.EmployeeDepartment;
+package com.learning.employe.operations.employeedepartment;
 
 import com.learning.employe.model.EmployeeDepartment;
 import com.learning.employe.service.EmployeeDepartmentService;

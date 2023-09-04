@@ -1,8 +1,8 @@
-package com.learning.employe.controller;
+package com.learning.employe.model;
 
 import java.io.File;
 
-public class FileCheckController {
+public class FileCheck {
 
 	public String checkFile(String filename) {
 		String directoryPath = "C:\\employe";
@@ -31,7 +31,7 @@ public class FileCheckController {
 	}
 
 	public static void main(String[] args) {
-		FileCheckController checkController = new FileCheckController();
-		System.out.println(checkController.checkFile("Abc"));
+		FileCheck check = new FileCheck();
+		System.out.println(check.checkFile("Abc"));
 	}
 }

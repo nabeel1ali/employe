@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.learning.employe.model.EmployeeDepartment;
-import com.learning.employe.operations.EmployeeDepartment.DeleteEmployeeDepartmentOperation;
+import com.learning.employe.operations.employeedepartment.DeleteEmployeeDepartmentOperation;
 import com.learning.employe.service.EmployeeDepartmentService;
 
 @RestController
