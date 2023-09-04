@@ -17,21 +17,21 @@ public class CreateEmployeeOperation {
 
 	private final Employee input;
 	private final BindingResult result;
+	
 	private final EmployeeService employeeService;
 	private final EmployeeDepartmentService employeeDepartmentService;
 	private final DepartmentService dService;
 
-
 	public CreateEmployeeOperation(final Employee employee, BindingResult result) {
+		
 		this.input = employee;
 		this.result = result;
+		
 		this.employeeService = BeanUtil.getBean(EmployeeService.class);
 		this.employeeDepartmentService = BeanUtil.getBean(EmployeeDepartmentService.class);
 		this.dService = BeanUtil.getBean(DepartmentService.class);
-
-
 	}
-
+	
 	public ModelAndView execute() {
 		ModelAndView mav = new ModelAndView();
 		if (result.hasErrors()) {

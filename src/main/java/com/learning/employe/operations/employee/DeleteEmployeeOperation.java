@@ -7,7 +7,9 @@ import com.learning.employe.service.EmployeeService;
 import com.learning.employe.utils.BeanUtil;
 
 public class DeleteEmployeeOperation {
+	
 	private final Long id;
+	
 	private final EmployeeService employeeService;
 	private final EmployeeDepartmentService edService;
 
@@ -15,7 +17,6 @@ public class DeleteEmployeeOperation {
 		this.id = id;
 		this.employeeService = BeanUtil.getBean(EmployeeService.class);
 		this.edService = BeanUtil.getBean(EmployeeDepartmentService.class);
-
 	}
 
 	public String execute() {

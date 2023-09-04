@@ -9,6 +9,7 @@ import com.learning.employe.service.UserService;
 import com.learning.employe.utils.BeanUtil;
 
 public class ReadAllUsersOperation {
+	
 	private final UserService uService;
 
 	public ReadAllUsersOperation() {
@@ -21,8 +22,4 @@ public class ReadAllUsersOperation {
 		mav.addObject("users", userList);
 		return mav;
 	}
-
-	// final List<Employee> employee = eService.getAllEmployee();
-	// return employee;
-
 }

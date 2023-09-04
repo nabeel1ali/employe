@@ -11,22 +11,14 @@ public class CreateDepartmentOperation {
 
 	private final Department input;
 	private final BindingResult result;
+	
 	private final DepartmentService departmentService;
 
 	public CreateDepartmentOperation(final Department department, BindingResult result) {
 		this.input = department;
 		this.result =result;
 		this.departmentService = BeanUtil.getBean(DepartmentService.class);
-
 	}
-
-//	public String execute() {
-//		if(result.hasErrors()) {
-//			return "redirect:/api/department/new";
-//		}
-//		departmentService.save(input);
-//		return "redirect:/api/department/";
-//	}
 	
 	public ModelAndView execute() {
 		ModelAndView mav = new ModelAndView();
@@ -35,7 +27,6 @@ public class CreateDepartmentOperation {
 			mav.addObject("department", input);
 			return mav;
 		}
-		
 		departmentService.save(input);
 		mav.setViewName("redirect:/api/department/");
 		return mav;

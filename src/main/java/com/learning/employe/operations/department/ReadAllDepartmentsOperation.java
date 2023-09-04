@@ -9,6 +9,7 @@ import com.learning.employe.service.DepartmentService;
 import com.learning.employe.utils.BeanUtil;
 
 public class ReadAllDepartmentsOperation {
+	
 	private final DepartmentService departmentService;
 
 	public ReadAllDepartmentsOperation() {
@@ -21,5 +22,4 @@ public class ReadAllDepartmentsOperation {
 		mav.addObject("departments", departmentList);
 		return mav;
 	}
-
 }

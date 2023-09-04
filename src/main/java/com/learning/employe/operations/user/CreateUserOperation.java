@@ -14,6 +14,7 @@ public class CreateUserOperation {
 
 	private final User input;
 	private final BindingResult result;
+	
 	private final UserService uService;
 
 	public CreateUserOperation(final User user, BindingResult result) {
@@ -51,7 +52,7 @@ public class CreateUserOperation {
 			mav.addObject("errorMessage", "Invalid email, doesn't match with the pattern.");
 			return mav;
 		}
-
+		
 		User user = uService.getByUserName(userName);
 		if (user != null) {
 			mav.setViewName("registration");
@@ -59,6 +60,7 @@ public class CreateUserOperation {
 			mav.addObject("errorMessage", "Invalid user, username already exists.");
 			return mav;
 		}
+		
 		User users = uService.getByEmail(email);
 		if (users != null) {
 			mav.setViewName("registration");
@@ -66,10 +68,9 @@ public class CreateUserOperation {
 			mav.addObject("errorMessage", "Invalid email, email already exists.");
 			return mav;
 		}
-
+		
 		uService.save(input);
 		mav.setViewName("redirect:/api/user/");
 		return mav;
 	}
-
 }

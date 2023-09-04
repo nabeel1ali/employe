@@ -5,13 +5,14 @@ import com.learning.employe.service.UserService;
 import com.learning.employe.utils.BeanUtil;
 
 public class DeleteUserOperation {
+	
 	private final Long id;
+	
 	private final UserService uService;
 
 	public DeleteUserOperation(final Long id) {
 		this.id = id;
 		this.uService = BeanUtil.getBean(UserService.class);
-
 	}
 
 	public String execute() {

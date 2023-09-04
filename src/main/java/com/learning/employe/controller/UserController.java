@@ -25,6 +25,7 @@ import com.learning.employe.operations.user.UpdateUserOperation;
 @Controller
 @RequestMapping("/api/user")
 public class UserController {
+	
 	@GetMapping("/")
 	public ModelAndView getAllUsers() {
 		return new ReadAllUsersOperation().execute();

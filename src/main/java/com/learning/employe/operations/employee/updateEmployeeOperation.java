@@ -12,8 +12,10 @@ import com.learning.employe.service.EmployeeService;
 import com.learning.employe.utils.BeanUtil;
 
 public class updateEmployeeOperation {
+	
 	private final Employee input;
 	private final BindingResult result;
+	
 	private final EmployeeService employeeService;
 	private final DepartmentService dService;
 
@@ -22,7 +24,6 @@ public class updateEmployeeOperation {
 		this.result = result;
 		this.employeeService = BeanUtil.getBean(EmployeeService.class);
 		this.dService = BeanUtil.getBean(DepartmentService.class);
-
 	}
 
 	public ModelAndView execute() {
@@ -34,6 +35,7 @@ public class updateEmployeeOperation {
 			mav.addObject("employe", input);
 			return mav;
 		}
+		
 		employeeService.save(input);
 		mav.setViewName("redirect:/api/employe/");
 		return mav;

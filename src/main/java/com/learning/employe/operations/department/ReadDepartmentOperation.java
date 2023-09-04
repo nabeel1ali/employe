@@ -9,6 +9,7 @@ import com.learning.employe.utils.BeanUtil;
 public class ReadDepartmentOperation {
 
 	private final Long id;
+	
 	private final DepartmentService departmentService;
 
 	public ReadDepartmentOperation(final Long id) {

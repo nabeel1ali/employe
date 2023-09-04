@@ -8,15 +8,16 @@ import com.learning.employe.service.DepartmentService;
 import com.learning.employe.utils.BeanUtil;
 
 public class UpdateDepartmentOperation {
+	
 	private final Department input;
 	private final BindingResult result;
+	
 	private final DepartmentService departmentService;
 
 	public UpdateDepartmentOperation(final Department department, BindingResult result) {
 		this.input = department;
 		this.result = result;
 		this.departmentService = BeanUtil.getBean(DepartmentService.class);
-
 	}
 
 	public ModelAndView execute() {

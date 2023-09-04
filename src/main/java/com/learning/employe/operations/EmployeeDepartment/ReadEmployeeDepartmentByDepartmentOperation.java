@@ -7,7 +7,9 @@ import com.learning.employe.service.EmployeeDepartmentService;
 import com.learning.employe.utils.BeanUtil;
 
 public class ReadEmployeeDepartmentByDepartmentOperation {
+	
 	private final Long id;
+	
 	private EmployeeDepartmentService edService;
 	private DepartmentService dService;
 
@@ -22,5 +24,4 @@ public class ReadEmployeeDepartmentByDepartmentOperation {
 		Department department = dService.getById(id);
 		return (edService.getById(id));
 	}
-
 }

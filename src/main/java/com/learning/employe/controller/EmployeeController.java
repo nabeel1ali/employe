@@ -76,7 +76,6 @@ public class EmployeeController {
 	public ModelAndView search(@RequestParam("firstName") final String firstName,@RequestParam("lastName") final String lastName, @RequestParam("deptName") final String deptName) {
 		return new EmployeeSearchOperation(firstName, lastName, deptName).execute();
 	}
-
 //	@GetMapping("/{firstName}")
 //	public Employee getEmployeeByFirstName(@PathVariable("firstName") String firstName) {
 //		return new ReadEmployeeOperation(firstName).execute();

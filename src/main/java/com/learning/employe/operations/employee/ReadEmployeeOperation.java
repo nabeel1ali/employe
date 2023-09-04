@@ -11,7 +11,7 @@ import com.learning.employe.service.EmployeeService;
 import com.learning.employe.utils.BeanUtil;
 
 public class ReadEmployeeOperation {
-
+	
 //	private final String firstName;
 	private final Long id;
 
@@ -22,9 +22,8 @@ public class ReadEmployeeOperation {
 		this.id = id;
 		this.eService = BeanUtil.getBean(EmployeeService.class);
 		this.dService = BeanUtil.getBean(DepartmentService.class);
-
 	}
-
+	
 	public ModelAndView execute() {
 		ModelAndView mav = new ModelAndView("update_employee");
 		final Employee employee = eService.getById(id);
@@ -32,6 +31,5 @@ public class ReadEmployeeOperation {
 		mav.addObject("departments", departments);
 		mav.addObject("employe", employee);
 		return mav;
-
 	}
 }

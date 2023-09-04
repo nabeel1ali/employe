@@ -9,7 +9,9 @@ import com.learning.employe.service.EmployeeService;
 import com.learning.employe.utils.BeanUtil;
 
 public class ReadByDepartmentOperation {
+
 	private final Long id;
+	
 	private EmployeeService eService;
 	private DepartmentService dService;
 
@@ -18,7 +20,7 @@ public class ReadByDepartmentOperation {
 		this.eService = BeanUtil.getBean(EmployeeService.class);
 		this.dService = BeanUtil.getBean(DepartmentService.class);
 	}
-
+	
 	public List<Employee> execute() {
 		Department department = dService.getById(id);
 		List<Employee> employess = eService.getByDepartment(department.getId());

@@ -29,6 +29,7 @@ import com.learning.employe.service.DepartmentService;
 @Controller
 @RequestMapping("/api/department")
 public class DepartmentController {
+
 	@Autowired
 	private DepartmentService departmentService;
 
@@ -51,8 +52,7 @@ public class DepartmentController {
 	}
 
 	@PostMapping("/save")
-	public ModelAndView createDepartment(@Valid @ModelAttribute("department") Department department,
-			BindingResult result) {
+	public ModelAndView createDepartment(@Valid @ModelAttribute("department") Department department,BindingResult result) {
 		return new CreateDepartmentOperation(department, result).execute();
 	}
 
@@ -80,5 +80,4 @@ public class DepartmentController {
 	public ModelAndView search(@RequestParam("deptName") final String deptName) {
 		return new ReadDepartmentsOperation(deptName).execute();
 	}
-
 }

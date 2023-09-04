@@ -17,6 +17,7 @@ import com.learning.employe.service.EmployeeDepartmentService;
 @RestController
 @RequestMapping("/api/employeedepartment")
 public class EmployeeDepartmentController {
+
 	@Autowired
 	private EmployeeDepartmentService employeeDepartmentService;
 
@@ -27,8 +28,7 @@ public class EmployeeDepartmentController {
 
 	@GetMapping("/department/{id}")
 	public ResponseEntity<List<EmployeeDepartment>> getEmployeeDepartmentByDepartmentId(@PathVariable("id") Long id) {
-		List<EmployeeDepartment> employeeDepartments = employeeDepartmentService
-				.getEmployeeDepartmentByDepartmentId(id);
+		List<EmployeeDepartment> employeeDepartments = employeeDepartmentService.getEmployeeDepartmentByDepartmentId(id);
 		return ResponseEntity.ok(employeeDepartments);
 	}
 

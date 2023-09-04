@@ -5,7 +5,9 @@ import com.learning.employe.service.DepartmentService;
 import com.learning.employe.utils.BeanUtil;
 
 public class DeleteDepartmentOperation {
+	
 	private final Long id;
+	
 	private final DepartmentService departmentService;
 
 	public DeleteDepartmentOperation(final Long id) {

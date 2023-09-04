@@ -8,9 +8,8 @@ import com.learning.employe.utils.BeanUtil;
 
 public class ReadUserOperation {
 
-//	private final String firstName;
 	private final Long id;
-
+	
 	private final UserService uService;
 
 	public ReadUserOperation(final Long id) {
@@ -23,6 +22,5 @@ public class ReadUserOperation {
 		final User user = uService.getById(id);
 		mav.addObject("user", user);
 		return mav;
-
 	}
 }

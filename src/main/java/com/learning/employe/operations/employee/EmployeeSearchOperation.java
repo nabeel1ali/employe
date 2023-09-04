@@ -13,6 +13,7 @@ public class EmployeeSearchOperation {
 	private final String firstName;
 	private final String lastName;
 	private final String deptName;
+	
 	private final EmployeeService eService;
 
 	public EmployeeSearchOperation(String firstName, String lastName, String deptName) {
@@ -28,5 +29,4 @@ public class EmployeeSearchOperation {
 		modelAndView.addObject("employees", employees);
 		return modelAndView;
 	}
-
 }

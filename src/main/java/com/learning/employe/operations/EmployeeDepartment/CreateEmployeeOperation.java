@@ -7,6 +7,7 @@ import com.learning.employe.utils.BeanUtil;
 public class CreateEmployeeOperation {
 
 	private final EmployeeDepartment input;
+	
 	private final EmployeeDepartmentService employeeDepartmentService;
 
 	public CreateEmployeeOperation(final EmployeeDepartment employeeDepartment) {
@@ -18,5 +19,4 @@ public class CreateEmployeeOperation {
 		employeeDepartmentService.save(input);
 		return input;
 	}
-
 }
